@@ -92,5 +92,6 @@ namespace Foodtruck.Grafico
                 AbreTelaInclusaoAlteracao(clienteSelecionado);
             }
         }
+
     }
 }
