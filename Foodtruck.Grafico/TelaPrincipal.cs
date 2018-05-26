@@ -127,7 +127,7 @@ namespace Foodtruck.Grafico
 
         private void listarPedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TelaListaPedidos tela = new TelaListaPedidos();
+            TelaListarPedidos tela = new TelaListarPedidos();
             tela.MdiParent = this;
             tela.Show();
         }

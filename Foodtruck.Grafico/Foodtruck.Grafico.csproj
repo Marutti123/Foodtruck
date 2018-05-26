@@ -52,6 +52,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TelaAdicionarBebidaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaAdicionarBebidaPedido.Designer.cs">
+      <DependentUpon>TelaAdicionarBebidaPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaAdicionarLanchePedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaAdicionarLanchePedido.Designer.cs">
+      <DependentUpon>TelaAdicionarLanchePedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaCadastrarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCadastrarPedido.Designer.cs">
+      <DependentUpon>TelaCadastrarPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detalhes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detalhes.Designer.cs">
+      <DependentUpon>Detalhes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManterBebida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,11 +114,11 @@
     <Compile Include="TelaListaLanches.Designer.cs">
       <DependentUpon>TelaListaLanches.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaListaPedidos.cs">
+    <Compile Include="TelaListarPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaListaPedidos.Designer.cs">
-      <DependentUpon>TelaListaPedidos.cs</DependentUpon>
+    <Compile Include="TelaListarPedidos.Designer.cs">
+      <DependentUpon>TelaListarPedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
@@ -102,6 +126,22 @@
     <Compile Include="TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaRemoverBebidaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaRemoverBebidaPedido.Designer.cs">
+      <DependentUpon>TelaRemoverBebidaPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaRemoverLanchePedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaRemoverLanchePedido.Designer.cs">
+      <DependentUpon>TelaRemoverLanchePedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util.cs" />
+    <EmbeddedResource Include="Detalhes.resx">
+      <DependentUpon>Detalhes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManterBebida.resx">
       <DependentUpon>ManterBebida.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +160,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TelaAdicionarBebidaPedido.resx">
+      <DependentUpon>TelaAdicionarBebidaPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAdicionarLanchePedido.resx">
+      <DependentUpon>TelaAdicionarLanchePedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaCadastrarPedido.resx">
+      <DependentUpon>TelaCadastrarPedido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaListaBebidas.resx">
       <DependentUpon>TelaListaBebidas.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,11 +178,17 @@
     <EmbeddedResource Include="TelaListaLanches.resx">
       <DependentUpon>TelaListaLanches.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaListaPedidos.resx">
-      <DependentUpon>TelaListaPedidos.cs</DependentUpon>
+    <EmbeddedResource Include="TelaListarPedidos.resx">
+      <DependentUpon>TelaListarPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaRemoverBebidaPedido.resx">
+      <DependentUpon>TelaRemoverBebidaPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaRemoverLanchePedido.resx">
+      <DependentUpon>TelaRemoverLanchePedido.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

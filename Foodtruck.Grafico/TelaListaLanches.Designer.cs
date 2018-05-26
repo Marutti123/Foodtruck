@@ -28,27 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btAlterar = new System.Windows.Forms.Button();
-            this.btRemover = new System.Windows.Forms.Button();
-            this.btAdicionar = new System.Windows.Forms.Button();
+            this.dgLanches = new System.Windows.Forms.DataGridView();
             this.codLanche = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeLanche = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btAlterar = new System.Windows.Forms.Button();
+            this.btRemover = new System.Windows.Forms.Button();
+            this.btAdicionar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgLanches)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgLanches
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgLanches.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgLanches.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codLanche,
             this.nomeLanche,
             this.valor});
-            this.dataGridView1.Location = new System.Drawing.Point(13, 43);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(589, 334);
-            this.dataGridView1.TabIndex = 7;
+            this.dgLanches.Location = new System.Drawing.Point(13, 42);
+            this.dgLanches.Name = "dgLanches";
+            this.dgLanches.Size = new System.Drawing.Size(589, 334);
+            this.dgLanches.TabIndex = 7;
+            // 
+            // codLanche
+            // 
+            this.codLanche.DataPropertyName = "Id";
+            this.codLanche.HeaderText = "Código Lanche";
+            this.codLanche.Name = "codLanche";
+            // 
+            // nomeLanche
+            // 
+            this.nomeLanche.DataPropertyName = "Nome";
+            this.nomeLanche.HeaderText = "Nome Lanche";
+            this.nomeLanche.Name = "nomeLanche";
+            // 
+            // valor
+            // 
+            this.valor.DataPropertyName = "Valor";
+            this.valor.HeaderText = "Valor";
+            this.valor.Name = "valor";
             // 
             // btAlterar
             // 
@@ -58,6 +76,7 @@
             this.btAlterar.TabIndex = 6;
             this.btAlterar.Text = "Alterar";
             this.btAlterar.UseVisualStyleBackColor = true;
+            this.btAlterar.Click += new System.EventHandler(this.btAlterar_Click);
             // 
             // btRemover
             // 
@@ -67,6 +86,7 @@
             this.btRemover.TabIndex = 5;
             this.btRemover.Text = "Remover";
             this.btRemover.UseVisualStyleBackColor = true;
+            this.btRemover.Click += new System.EventHandler(this.btRemover_Click);
             // 
             // btAdicionar
             // 
@@ -78,40 +98,26 @@
             this.btAdicionar.UseVisualStyleBackColor = true;
             this.btAdicionar.Click += new System.EventHandler(this.btAdicionar_Click);
             // 
-            // codLanche
-            // 
-            this.codLanche.HeaderText = "Código Lanche";
-            this.codLanche.Name = "codLanche";
-            // 
-            // nomeLanche
-            // 
-            this.nomeLanche.HeaderText = "Nome Lanche";
-            this.nomeLanche.Name = "nomeLanche";
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor";
-            this.valor.Name = "valor";
-            // 
             // TelaListaLanches
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 389);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgLanches);
             this.Controls.Add(this.btAlterar);
             this.Controls.Add(this.btRemover);
             this.Controls.Add(this.btAdicionar);
             this.Name = "TelaListaLanches";
             this.Text = "TelaListaLanches";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.TelaListaLanches_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgLanches)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgLanches;
         private System.Windows.Forms.Button btAlterar;
         private System.Windows.Forms.Button btRemover;
         private System.Windows.Forms.Button btAdicionar;

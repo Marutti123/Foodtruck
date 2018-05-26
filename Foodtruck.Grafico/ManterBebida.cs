@@ -14,33 +14,11 @@ namespace Foodtruck.Grafico
 {
     public partial class ManterBebida : Form
     {
-        private readonly object bebida;
-
         public Bebida BebidaSelecionada { get; set; }
 
         public ManterBebida()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btSalvar_Click(object sender, EventArgs e)
@@ -60,31 +38,14 @@ namespace Foodtruck.Grafico
             bebida.Tamanho = Convert.ToSingle(tbTamanhoBebida.Text);
             bebida.Valor = Convert.ToDecimal(tbValorBebida.Text);
 
-            Gerenciador gerenciador = new Gerenciador();
-            Validacao resultado = gerenciador.CadastraBebida(bebida);
-
-            /*if (resultado.Valido)
-            {
-                MessageBox.Show("Deu certo");
-            }
-            else
-            {
-                String msg = "";
-
-                foreach (KeyValuePair<string, string> err in resultado.Mensagens)
-                    msg += err.Value + "\n";
-
-                MessageBox.Show(msg);
-            }*/
-
             Validacao validacao;
-            if (BebidaSelecionada == null)
+            if (BebidaSelecionada != null)
             {
                 validacao = Program.Gerenciador.CadastraBebida(BebidaSelecionada);
             }
             else
             {
-                validacao = Program.Gerenciador.CadastraBebida(BebidaSelecionada);
+                validacao = Program.Gerenciador.CadastraBebida(bebida);
             }
 
             if (!validacao.Valido)
@@ -100,21 +61,10 @@ namespace Foodtruck.Grafico
             }
             else
             {
-                MessageBox.Show("Cliente salvo com sucesso");
+                MessageBox.Show("Bebida salva com sucesso");
             }
 
             this.Close();
-
-            //////////////////////////////////////////////////
-
-            /*Pedido pedido = new Pedido();
-
-            Bebida bebida = gerenciador.TodasAsBebidas().First();
-
-            pedido.Bebidas.Add(bebida);
-
-            gerenciador.CadastraPedido(pedido);
-            */
         }
 
 
@@ -123,7 +73,7 @@ namespace Foodtruck.Grafico
             this.Close();
         }
 
-        private void ManterCliente_Shown(object sender, EventArgs e)
+        private void ManterBebida_Shown(object sender, EventArgs e)
         {
             if (BebidaSelecionada != null)
             {
@@ -132,8 +82,6 @@ namespace Foodtruck.Grafico
                 this.tbTamanhoBebida.Text = Convert.ToString(BebidaSelecionada.Tamanho);
                 this.tbValorBebida.Text = Convert.ToString(BebidaSelecionada.Valor);
             }
-
-
         }
     }
 }

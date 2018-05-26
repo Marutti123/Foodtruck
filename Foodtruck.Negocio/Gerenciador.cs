@@ -29,6 +29,14 @@ namespace Foodtruck.Negocio
             return validacao;
         }
 
+        public Validacao RemoverLanche(Lanche lanche)
+        {
+            Validacao validacao = new Validacao();
+            banco.Lanches.Remove(lanche);
+            banco.SaveChanges();
+            return validacao;
+        }
+
         public Validacao AlterarCliente(Cliente clienteAlterado)
         {
             Validacao validacao = new Validacao();
@@ -36,6 +44,16 @@ namespace Foodtruck.Negocio
             clienteBanco.Nome = clienteAlterado.Nome;
             clienteBanco.Email = clienteAlterado.Email;
             clienteBanco.CPF = clienteAlterado.CPF;
+            this.banco.SaveChanges();
+            return validacao;
+        }
+
+        public Validacao AlterarLanche(Lanche lancheAlterado)
+        {
+            Validacao validacao = new Validacao();
+            Lanche lancheBanco = BuscaLanchePorId(lancheAlterado.Id);
+            lancheBanco.Nome = lancheAlterado.Nome;
+            lancheBanco.Valor = lancheAlterado.Valor;
             this.banco.SaveChanges();
             return validacao;
         }
@@ -180,12 +198,54 @@ namespace Foodtruck.Negocio
                 }
             }
 
+            this.banco.Pedidos.Add(pedidoCadastrado);
+            this.banco.SaveChanges();
+
             return validacao;
         }
         
         public Cliente BuscaClientePorId(long id)
         {
             return this.banco.Clientes.Where(c => c.Id == id).FirstOrDefault();
+        }
+
+        public Pedido BuscaPedidoPorId(long id)
+        {
+            return this.banco.Pedidos.Where(c => c.Id == id).FirstOrDefault();
+        }
+
+        public Lanche BuscaLanchePorId(long id)
+        {
+            return this.banco.Lanches.Where(c => c.Id == id).FirstOrDefault();
+        }
+
+        public Bebida BuscaBebidaPorId(long id)
+        {
+            return this.banco.Bebidas.Where(c => c.Id == id).FirstOrDefault();
+        }
+
+        public void AdicionarBebidaAoPedido(Pedido pedido, Bebida bebida)
+        {
+            pedido.AdicionarBebida(bebida);
+            this.banco.SaveChanges();
+        }
+
+        public void AdicionarLancheAoPedido(Pedido pedido, Lanche lanche)
+        {
+            pedido.AdicionarLanche(lanche);
+            this.banco.SaveChanges();
+        }
+
+        public void RemoverBebidaDoPedido(Pedido pedido, long idBebida)
+        {
+            pedido.Bebidas.Remove(pedido.Bebidas.FirstOrDefault(e => e.Id.Equals(idBebida)));
+            this.banco.SaveChanges();
+        }
+
+        public void RemoverLancheDoPedido(Pedido pedido, long idLanche)
+        {
+            pedido.Lanches.Remove(pedido.Lanches.FirstOrDefault(e => e.Id.Equals(idLanche)));
+            this.banco.SaveChanges();
         }
 
         public List<Cliente> TodosOsClientes()

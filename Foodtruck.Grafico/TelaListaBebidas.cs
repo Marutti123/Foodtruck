@@ -102,6 +102,11 @@ namespace Foodtruck.Grafico
                 }
             }
         }
+
+        private void TelaListaBebidas_Load_1(object sender, EventArgs e)
+        {
+            CarregarBebidas();
+        }
     }
 }
 /*private void CarregarClientes()

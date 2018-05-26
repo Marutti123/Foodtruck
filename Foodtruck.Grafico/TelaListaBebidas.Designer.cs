@@ -117,6 +117,7 @@
             this.Controls.Add(this.btAdicionar);
             this.Name = "TelaListaBebidas";
             this.Text = "TelaListaBebidas";
+            this.Load += new System.EventHandler(this.TelaListaBebidas_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgBebidas)).EndInit();
             this.ResumeLayout(false);
 

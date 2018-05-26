@@ -48,7 +48,6 @@
             this.label1.Size = new System.Drawing.Size(90, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código bebida:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -58,7 +57,6 @@
             this.label2.Size = new System.Drawing.Size(63, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tamanho:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
             // 
@@ -68,7 +66,6 @@
             this.label4.Size = new System.Drawing.Size(44, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "Nome:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // tbTamanhoBebida
             // 
@@ -99,7 +96,6 @@
             this.label6.Size = new System.Drawing.Size(38, 15);
             this.label6.TabIndex = 10;
             this.label6.Text = "Valor:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // tbValorBebida
             // 
@@ -147,6 +143,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ManterBebida";
             this.Text = "ManterBebida";
+            this.Shown += new System.EventHandler(this.ManterBebida_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
