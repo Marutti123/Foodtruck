@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             this.dgPedidos = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_Gambi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_Gambi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgPedidos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,10 +52,41 @@
             this.cl_cliente,
             this.Valor,
             this.cl_Gambi});
-            this.dgPedidos.Location = new System.Drawing.Point(125, 12);
+            this.dgPedidos.Location = new System.Drawing.Point(131, 58);
             this.dgPedidos.Name = "dgPedidos";
             this.dgPedidos.Size = new System.Drawing.Size(718, 304);
             this.dgPedidos.TabIndex = 1;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // Data
+            // 
+            this.Data.DataPropertyName = "DataCompra";
+            this.Data.HeaderText = "Data";
+            this.Data.Name = "Data";
+            // 
+            // cl_cliente
+            // 
+            this.cl_cliente.DataPropertyName = "NomeCliente";
+            this.cl_cliente.HeaderText = "Cliente";
+            this.cl_cliente.Name = "cl_cliente";
+            // 
+            // Valor
+            // 
+            this.Valor.DataPropertyName = "Valor";
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
+            // 
+            // cl_Gambi
+            // 
+            this.cl_Gambi.DataPropertyName = "Cliente";
+            this.cl_Gambi.HeaderText = "Column1";
+            this.cl_Gambi.Name = "cl_Gambi";
+            this.cl_Gambi.Visible = false;
             // 
             // button1
             // 
@@ -100,7 +130,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(322, 350);
+            this.button5.Location = new System.Drawing.Point(330, 399);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 61);
             this.button5.TabIndex = 6;
@@ -110,7 +140,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(466, 350);
+            this.button6.Location = new System.Drawing.Point(580, 399);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 61);
             this.button6.TabIndex = 7;
@@ -118,50 +148,9 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.tbDetalhe_Click);
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(605, 350);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 61);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Atualizar";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            // 
-            // Data
-            // 
-            this.Data.DataPropertyName = "DataCompra";
-            this.Data.HeaderText = "Data";
-            this.Data.Name = "Data";
-            // 
-            // cl_cliente
-            // 
-            this.cl_cliente.DataPropertyName = "NomeCliente";
-            this.cl_cliente.HeaderText = "Cliente";
-            this.cl_cliente.Name = "cl_cliente";
-            // 
-            // Valor
-            // 
-            this.Valor.DataPropertyName = "Valor";
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
-            // 
-            // cl_Gambi
-            // 
-            this.cl_Gambi.DataPropertyName = "Cliente";
-            this.cl_Gambi.HeaderText = "Column1";
-            this.cl_Gambi.Name = "cl_Gambi";
-            this.cl_Gambi.Visible = false;
-            // 
             // TelaListarPedidos
             // 
             this.ClientSize = new System.Drawing.Size(989, 528);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -197,7 +186,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Data;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_cliente;

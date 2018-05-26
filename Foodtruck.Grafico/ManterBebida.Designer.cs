@@ -38,6 +38,7 @@
             this.tbValorBebida = new System.Windows.Forms.MaskedTextBox();
             this.btCancelar = new System.Windows.Forms.Button();
             this.btSalvar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -126,11 +127,21 @@
             this.btSalvar.UseVisualStyleBackColor = true;
             this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(214, 121);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(21, 15);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "ml";
+            // 
             // ManterBebida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(324, 302);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btSalvar);
             this.Controls.Add(this.tbValorBebida);
@@ -161,5 +172,6 @@
         private System.Windows.Forms.MaskedTextBox tbValorBebida;
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.Button btSalvar;
+        private System.Windows.Forms.Label label3;
     }
 }
