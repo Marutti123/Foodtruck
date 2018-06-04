@@ -19,6 +19,7 @@ namespace Foodtruck.Grafico
         }*/
         public Int64 PedidoId { get; set; }
 
+		//Adiciona pedido
         public TelaAdicionarBebidaPedido()
         {
             InitializeComponent();
